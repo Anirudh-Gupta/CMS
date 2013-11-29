@@ -1,0 +1,573 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <%#= stylesheet_link_tag    "application", :media => "all" %>
+    <%#= javascript_include_tag "application" %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="google-site-verification" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>LilyFit</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="shortcut icon" href="assets/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/fractionslider.css"/>
+    <link rel="stylesheet" media="only screen and (max-width: 1024px)" href="assets/styles_1024.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 480px)" href="assets/styles_480.css" />
+    <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio : 1.5),
+          only screen and (min-device-pixel-ratio : 1.5)" href="assets/styles_480.css" />
+
+    <!-- html5.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- css3-mediaqueries.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="media/styles/ie7.css" />
+    <![endif]-->
+
+    <!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="media/styles/ie8.css" />
+    <![endif]-->
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- Preloader -->
+    <script type="text/javascript">
+      //<![CDATA[
+      $(window).load(function() { // makes sure the whole site is loaded
+        $('#status').fadeOut(); // will first fade out the loading animation
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('.bodyWrapper').delay(350).css({'visibility':'visible'});
+        $.fn.slider();
+      })
+      //]]>
+    </script>
+  </head>
+
+  <body>
+    <noscript>
+      <style type="text/css">
+        .bodyWrapper{
+          display:none;
+        }
+      </style>
+      <div class="noscript" style="width:100%; margin:50px auto; padding: 10px 0;text-align:center; font: bold 18px arial; color: #000; background-color:#6699FF">
+	   Your browser's JavaScript seems to be Disabled. Please enable the JavaScript to get all functionalty of the site.
+      </div>
+    </noscript>
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+
+    <div class="bodyWrapper">
+
+      <div class="header">
+        <div class="fixed-grid">
+
+          <div class="header-top-wrap">
+            <div class="fixed-grid-inner">
+              <div class="login-lang-wrap">
+                <div class="login-wrap">
+                  <ul class="login-nav-links">
+                    <li class="header-home">
+                      <a href="index.html"><img src="assets/Home_ico.jpg" alt="Home" /></a>
+                    </li>
+                    <li class="header-cart">
+                      <a href="cart.html"><img src="assets/Cart_ico.jpg" alt="Shopping Cart"/></a>
+                    </li>
+                    <li class="header-login">
+                      <a href="login.html">Login</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="lang-wrap">
+                  <ul class="lang-nav-links">
+                    <li class="header-lang-one">
+                      <a href=""><img src="assets/flag1.jpg" alt="Language  1"/></a>
+                    </li>
+                    <li class="header-lang-two">
+                      <a href=""><img src="assets/flag2.jpg" alt="Language  2"/></a>
+                    </li>
+                    <li class="header-lang-three">
+                      <a href=""><img src="assets/flag3.jpg" alt="Language  3"/></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-wrapper">
+            <div class="fixed-grid-inner">
+              <span class="toggle-header-menu"><a href="javascript:void(0);">MENU</a></span>
+              <ul class="nav-main-list">
+                <li class="parent">
+                  <a href="">CLASSES</a>
+                </li>
+                <li class="">
+                  <a href="">INSTRUCTORS</a>
+                </li>
+                <li class="parent">
+                  <a href="">WORKSHOPS</a>
+                </li>
+                <li class="">
+                  <a href="">RETREATS</a>
+                </li>
+                <li class="">
+                  <a href="">NUTRITION</a>
+                </li>
+                <li class="last">
+                  <a href="">KNOW ABOUT LILYFIT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="fixed-grid-inner">
+            <div class="left-wrapper">
+              <div class="logo-wrapper">
+                <a href="index.html"><img src="assets/Logo.jpg" alt="LilyFit logo"/></a>
+              </div>
+              <div class="sub-page-wrapper">
+                <ul>
+                  <li class="subpage-link-wrap">
+                    <div class="subpage-link">
+                      <a href="">
+                        <span class="subpage-img-wrapper">
+                          <span class="pilates">&nbsp;</span>
+                          <!--<img src="media/images/Pilates.png"  alt="PILATES" />-->
+                        </span>
+                        <span class="subpage-main-img">PILATES</span>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="subpage-link-wrap">
+                    <div class="subpage-link">
+                      <a href="">
+                        <span class="subpage-img-wrapper">
+                          <span class="yoga">&nbsp;</span>
+                          <!--<img src="media/images/Yoga.png"  alt="YOGA" />-->
+                        </span>
+                        <span class="subpage-main-img">YOGA</span>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="subpage-link-wrap">
+                    <div class="subpage-link">
+                      <a href="">
+                        <span class="subpage-img-wrapper">
+                          <span class="bodytoning">&nbsp;</span>
+                          <!--<img src="media/images/Body_toning.png"  alt="BODY TONING &amp; DANCE" />-->
+                        </span>
+                        <span class="subpage-main-img">BODY TONING &amp; DANCE</span>
+                      </a>
+                    </div>
+                  </li>
+
+                  <li class="subpage-link-wrap subpage-link-wrap-last">
+                    <div class="subpage-link">
+                      <a href="">
+                        <span class="subpage-img-wrapper">
+                          <span class="prepostnatal">&nbsp;</span>
+                          <!--<img src="media/images/Pre_Postnatal.png"  alt="PRE &amp; POST NATAL" />-->
+                        </span>
+                        <span class="subpage-main-img">PRE &amp; POST NATAL<strong></strong></span>
+                      </a>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!--header ends here-->
+
+      <div class="slider-outer-wrap">
+        <div class="slider-wrapper">
+          <div class="responisve-container">
+            <div class="slider">
+              <div class="fs_loader"></div>
+
+              <div class="slide">
+                <img    src="assets/slide1_bg.jpg"
+                        width="1800" height="689"
+                        data-position="0,-300" data-step="0" data-in="fade" data-out="none" data-easeIn="easeOutCirc" alt="Slider image"/>
+
+                <img    src="assets/slide1_main.png"
+                        width="816" height="371"
+                        data-position="290,400" data-step="1" data-in="fade" data-delay="100" data-out="bottomRight" alt="Slider image"/>
+
+                <p      class="claim light-green small MyriadPro-Light"
+                        data-position="210,230" data-in="right" data-step="2"  data-delay="200" data-out="top">Practice</p>
+
+                <p      class="MYRIADPRO-BOLD"
+                        data-position="270,230" data-in="right" data-step="2" data-delay="300">with the best</p>
+
+                <p      class="subtext"
+                        data-position="340,230" data-in="right" data-step="3" data-delay="500">Unlimited yoga classes</p>
+                <p      class="subtext"
+                        data-position="360,230" data-in="right" data-step="3" data-delay="600">in the comfort of your home</p>
+
+                <p      class="button"
+                        data-position="390,230" data-in="top" data-step="3" data-delay="2000">
+                  <a href="">Watch us</a>
+                </p>
+              </div>
+
+              <div class="slide">
+                <img    src="assets/slide2_bg.jpg"
+                        width="1800" height="689"
+                        data-position="0,-300" data-step="0" data-in="fade" data-out="none" data-easeIn="easeOutCirc" alt="Slider image"/>
+
+                <img    src="assets/slide2_main.png"
+                        width="716" height="686"
+                        data-position="60,600" data-step="1" data-in="fade" data-delay="100" data-out="bottomRight" alt="Slider image"/>
+
+                <p      class="claim light-green small MyriadPro-Light"
+                        data-position="210,230" data-in="right" data-step="2"  data-delay="200" data-out="top">Practice</p>
+
+                <p      class="MYRIADPRO-BOLD ygreen"
+                        data-position="270,230" data-in="right" data-step="2" data-delay="300">with the best</p>
+
+                <p      class="subtext"
+                        data-position="340,230" data-in="right" data-step="3" data-delay="500">Unlimited yoga classes</p>
+                <p      class="subtext"
+                        data-position="360,230" data-in="right" data-step="3" data-delay="600">in the comfort of your home</p>
+
+                <p      class="button"
+                        data-position="390,230" data-in="top" data-step="3" data-delay="2000">
+                  <a href="">Watch us</a>
+                </p>
+
+              </div>
+
+              <div class="slide">
+                <img    src="assets/slide3_bg.jpg"
+                        width="1800" height="689"
+                        data-position="0,-300" data-step="0" data-in="fade" data-out="none" data-easeIn="easeOutCirc" alt="Slider image"/>
+
+                <img    src="assets/slide3_main.png"
+                        width="561" height="557"
+                        data-position="135,700" data-step="1" data-in="fade" data-delay="100" data-out="bottomRight" alt="Slider image"/>
+
+                <p      class="claim light-green small MyriadPro-Light"
+                        data-position="210,230" data-in="right" data-step="2"  data-delay="200" data-out="top">Practice</p>
+
+                <p      class="MYRIADPRO-BOLD"
+                        data-position="270,230" data-in="right" data-step="2" data-delay="300">with the best</p>
+
+                <p      class="subtext"
+                        data-position="340,230" data-in="right" data-step="3" data-delay="500">Unlimited yoga classes</p>
+                <p      class="subtext"
+                        data-position="360,230" data-in="right" data-step="3" data-delay="600">in the comfort of your home</p>
+
+                <p      class="button"
+                        data-position="390,230" data-in="top" data-step="3" data-delay="2000">
+                  <a href="">Watch us</a>
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed-grid">
+        <div class="fixed-grid-inner">
+          <div class="sub-page-wrapper sub-page-wrapper-mobile">
+            <ul>
+              <li class="subpage-link-wrap">
+                <div class="subpage-link">
+                  <a href="">
+                    <span class="subpage-img-wrapper">
+                      <span class="pilates">&nbsp;</span>
+                      <!--<img src="media/images/Pilates.png"  alt="PILATES" />-->
+                    </span>
+                    <span class="subpage-main-img">PILATES</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="subpage-link-wrap">
+                <div class="subpage-link">
+                  <a href="">
+                    <span class="subpage-img-wrapper">
+                      <span class="yoga">&nbsp;</span>
+                      <!--<img src="media/images/Yoga.png"  alt="YOGA" />-->
+                    </span>
+                    <span class="subpage-main-img">YOGA</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="subpage-link-wrap">
+                <div class="subpage-link">
+                  <a href="">
+                    <span class="subpage-img-wrapper">
+                      <span class="bodytoning">&nbsp;</span>
+                      <!--<img src="media/images/Body_toning.png"  alt="BODY TONING &amp; DANCE" />-->
+                    </span>
+                    <span class="subpage-main-img">BODY TONING &amp; DANCE</span>
+                  </a>
+                </div>
+              </li>
+
+              <li class="subpage-link-wrap subpage-link-wrap-last">
+                <div class="subpage-link">
+                  <a href="">
+                    <span class="subpage-img-wrapper">
+                      <span class="prepostnatal">&nbsp;</span>
+                      <!--<img src="media/images/Pre_Postnatal.png"  alt="PRE &amp; POST NATAL" />-->
+                    </span>
+                    <span class="subpage-main-img">PRE &amp; POST NATAL<strong></strong></span>
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainContent">
+        <div class="full-width-shadow">
+        </div>
+        <div class="fixed-grid">
+          <div class="footer-levelOne">
+            <div class="fixed-grid-inner">
+              <div class="footer-blocks footer-contact">
+                <h2>Contact Us</h2>
+                <div class="footer-contact-block">
+                  <span class="imgWrapper">
+                    <img src="assets/phone.jpg"  alt="Phone Contact" />
+                  </span>
+                  <span class="descWrapper">
+                    <span class="main-text">Phone</span>
+                    <span class="sub-text">+91 9876 654321</span>
+                  </span>
+                </div>
+                <div class="footer-contact-block">
+                  <span class="imgWrapper">
+                    <img src="assets/email.jpg"  alt="Email Contact" />
+                  </span>
+                  <span class="descWrapper">
+                    <span class="main-text">Email</span>
+                    <span class="sub-text"><a href="mailto:">info@lilyfit.com</a></span>
+                  </span>
+                </div>
+                <div class="footer-contact-block">
+                  <span class="imgWrapper">
+                    <img src="assets/mail.jpg"  alt="Contact" />
+                  </span>
+                  <span class="descWrapper">
+                    <span class="main-text">Contact form</span>
+                    <span class="sub-text"><a href="">Write a message</a></span>
+                  </span>
+                </div>
+                <div class="footer-contact-block">
+                  <span class="imgWrapper">
+                    <img src="assets/skype.jpg"  alt="Skype" />
+                  </span>
+                  <span class="descWrapper">
+                    <span class="main-text">Skype</span>
+                    <span class="sub-text">lilyfit</span>
+                  </span>
+                </div>
+                <div class="socail-links-wrap">
+                  <ul>
+                    <li><a href=""><img src="assets/facebook.jpg" alt ="Facebook" /></a></li>
+                    <li><a href=""><img src="assets/twitter.jpg" alt ="Twitter"  /></a></li>
+                    <li><a href=""><img src="assets/linkedin.jpg" alt ="Linkedin"  /></a></li>
+                    <li><a href=""><img src="assets/rss.jpg" alt ="RSS"  /></a></li>
+                    <li><a href=""><img src="assets/picasa.jpg"  alt ="Picasa" /></a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="footer-blocks footer-shop">
+                <h2>SHOP</h2>
+                <ul class="footer-sublinks">
+                  <li><a href="">Shop</a></li>
+                  <li><a href="">Lilyfit Tops</a></li>
+                  <li><a href="">Lilyfit Pants</a></li>
+                  <li><a href="">Accessories</a></li>
+                  <li><a href="">Mats</a></li>
+                  <li><a href="">Rollers</a></li>
+                  <li><a href="">Magic Circles</a></li>
+                  <li class="last"><a href="">Lilyfit Gift Box</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-blocks footer-links">
+                <h2>Links</h2>
+                <ul class="footer-sublinks">
+                  <li><a href="">FAQ</a></li>
+                  <li><a href="">Filming Locations</a></li>
+                  <li><a href="">Testimonials</a></li>
+                  <li><a href="">How It Works</a></li>
+                  <li><a href="">My Account</a></li>
+                  <li><a href="">Gift Ideas</a></li>
+                  <li><a href="">Privacy Policy</a></li>
+                  <li class="last"><a href="">Terms &amp; Conditions</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-blocks footer-forum">
+                <h2>FORUM</h2>
+                <div class="footer-forum-block first">
+                  <a href="">
+                    <span class="imgWrapper">
+                      <img src="assets/forum_1.jpg" alt="Forum" />
+                    </span>
+                    <span class="descWrapper">
+                      <span class="main-text">CLASS DISCUSSION</span>
+                      <span class="sub-text">Nov 08 2013</span>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="footer-forum-block">
+                  <a href="">
+                    <span class="imgWrapper">
+                      <img src="assets/forum_2.jpg" alt="Forum" />
+                    </span>
+                    <span class="descWrapper">
+                      <span class="main-text">ASK AN INSTRUCTOR</span>
+                      <span class="sub-text">Nov 03 2013</span>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="footer-forum-block">
+                  <a href="">
+                    <span class="imgWrapper">
+                      <img src="assets/forum_3.jpg" alt="Forum" />
+                    </span>
+                    <span class="descWrapper">
+                      <span class="main-text">FEEDBACK TIME</span>
+                      <span class="sub-text">Oct 30 2013</span>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="footer-forum-block">
+                  <a href="">
+                    <span class="imgWrapper">
+                      <img src="assets/forum_4.jpg" alt="Forum" />
+                    </span>
+                    <span class="descWrapper">
+                      <span class="main-text">LADIES CORNER</span>
+                      <span class="sub-text">Oct 28 2013</span>
+                    </span>
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="footer-blocks footer-newsletter-testimonials">
+                <div class=" footer-newsletter">
+                  <h2>NEWSLETTER</h2>
+                  <div class="footer-newsletter-testarea">
+                    <div class="inpur-wrap">
+                      <input type="text" onblur="if(this.value=='')this.value='Enter your email';" onfocus="if(this.value=='Enter your email')this.value='';" value="Enter your email" maxlength="200" name="search" class="search-input"/>
+                      <input type="submit" value="SUBMIT" class="submit"/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="footer-testimonials">
+                  <h2>TESTIMONIALS</h2>
+                  <div class="testimonials-wrapper">
+                    <div class="testimonials-imgWrap">
+                      <img src="assets/Testimonials.jpg" alt="Miranda Valey" />
+                    </div>
+                    <div class="testimonials-descWrap">
+                      <p class="testimonials-text">Amazing variations of passages of Lorem Ipsum available, the majority have lipsum. Amazing variations of passages of Lorem Ipsum available.</p>
+                      <p class="testimonials-author">Miranda Valey</p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="full-width-line"></div>
+
+          <div class="footer-levelTwo">
+            <div class="fixed-grid-inner">
+              <div class="fixed-grid">
+                <div class="fixed-grid-inner">
+                  <p class="copyright">&copy; Copyright 2013, Lilyfit , All Rights Reserved. </p>
+                  <p class="poweredby-text"><a target="_blank" href="http://colorcuboid.com/">Powered by <img src="assets/colorcuboid.jpg" alt="Slider image"/>&nbsp;ColorCuboid Designs</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!--mainContent ends here-->
+      <div class="width">&nbsp;</div>
+      <div class="footer">
+
+      </div><!--footer ends here-->
+
+    </div>	<!--bodyWrapper ends here-->
+
+    <script type="text/javascript" src='assets/jquery-migrate-1.1.1.min.js'></script>
+    <script type="text/javascript" src='assets/jquery-ui.min.js'></script>
+    <script type="text/javascript" src='assets/script.js'></script>
+    <script type="text/javascript" src='assets/jquery.fractionslider.js'></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+alert("hai");
+        $.fn.slider = function(){
+          $('.slider').fractionSlider({
+            'autoChange':           true,
+            'fullWidth':            true,
+            'controls':             false,
+            'pager':                true,
+            'responsive':           true,
+            'dimensions':           "1100,689",
+            'increase':             false,
+            'pauseOnHover':         false
+          });
+        }
+
+        $(window).resize(function(){
+          $('.width').html($(window).width());
+          $('.left-wrapper').height($('.slider-outer-wrap').height() - 60);
+        });
+
+      });
+
+      $(document).ready(function(){
+        $('.width').html($(window).width());
+
+        // Header menu toggle in mobile view
+        $('.toggle-header-menu').on('click', function(){
+          $(this).siblings('.nav-main-list').slideToggle();
+        });
+
+      });
+
+
+    </script>
+
+  </body>
+</html>

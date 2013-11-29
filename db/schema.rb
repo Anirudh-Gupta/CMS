@@ -41,12 +41,14 @@ ActiveRecord::Schema.define(:version => 20131119090014) do
 
   create_table "clas", :force => true do |t|
     t.string   "name"
+    t.string   "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "exercises", :force => true do |t|
     t.string   "name"
+    t.string   "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -74,11 +76,9 @@ ActiveRecord::Schema.define(:version => 20131119090014) do
 
   create_table "playlists", :force => true do |t|
     t.string   "name"
-    t.text     "description"
-    t.integer  "instructor_id"
-    t.integer  "user_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.string   "category"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20131119090014) do
 
   create_table "workshops", :force => true do |t|
     t.string   "name"
+    t.string   "category"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
